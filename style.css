@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(145deg, #000428, #004e92);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.game-container {
+  text-align: center;
+  padding: 30px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0,255,255,0.2);
+  width: 100%;
+  max-width: 600px;
+}
+
+.final-message {
+  text-align: center;
+  color: #ff4d4d;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  font-size: 2em;
+  color: #00ffe7;
+  text-shadow: 0 0 15px #00ffe7;
+  margin-bottom: 10px;
+}
+
+.play-count {
+  font-size: 1em;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.controls {
+  margin-bottom: 30px;
+}
+
+.bet-option label {
+  font-size: 1em;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.bet-chip {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.bet-chip.red {
+  background: crimson;
+  color: white;
+  box-shadow: 0 0 10px red;
+}
+
+.bet-chip.blue {
+  background: #007bff;
+  color: white;
+  box-shadow: 0 0 10px #00f;
+}
+
+.roll-btn {
+  background: linear-gradient(to right, #f83600, #f9d423);
+  padding: 12px 30px;
+  border: none;
+  border-radius: 40px;
+  font-size: 1em;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+  margin-top: 15px;
+}
+
+.roll-btn:hover {
+  transform: scale(1.05);
+}
+
+.glow {
+  box-shadow: 0 0 15px #f9d423, 0 0 30px #f83600;
+}
+
+.dice-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.dice {
+  width: 70px;
+  height: 70px;
+  background: white;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #000;
+  border-radius: 50%;
+  opacity: 0;
+  margin: auto;
+}
+.dot.active {
+  opacity: 1;
+}
+
+.dice.shake {
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(-15deg); }
+  75% { transform: rotate(5deg); }
+  100% { transform: rotate(0); }
+}
+
+.neon-panel {
+  background: rgba(255,255,255,0.08);
+  border-radius: 15px;
+  padding: 20px;
+  border: 2px solid rgba(0,255,255,0.2);
+  box-shadow: 0 0 20px rgba(0,255,255,0.4);
+}
+
+.result-item {
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+.total {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: gold;
+  text-shadow: 0 0 5px gold;
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5em;
+  }
+
+  .roll-btn {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+
+  .dice {
+    width: 60px;
+    height: 60px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .result-item,
+  .play-count,
+  .bet-option label {
+    font-size: 0.9em;
+  }
+
+  .final-message {
+    font-size: 1.2em;
+    padding: 10px;
+  }
+}

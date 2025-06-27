@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎲 Tài Xỉu VIP 🎲</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="game-container" id="gameContainer">
+    <h1 class="title">🎰 TÀI KHÔNG ĐỢI XỈU 🎰</h1>
+    <p class="play-count">🔄 Lượt chơi còn lại: <span id="playCount">10</span></p>
+
+    <div class="controls">
+      <div class="bet-option">
+        <label><input type="radio" name="bet" value="tài" checked /> <span class="bet-chip red">TÀI</span></label>
+        <label><input type="radio" name="bet" value="xỉu" /> <span class="bet-chip blue">XỈU</span></label>
+      </div>
+      <button class="roll-btn glow" id="rollBtn">🎲 LẮC NGAY 🎲</button>
+    </div>
+
+    <div class="dice-container" id="diceContainer">
+      <div class="dice"></div>
+      <div class="dice"></div>
+      <div class="dice"></div>
+    </div>
+
+    <div class="results neon-panel" id="results" style="display: none;">
+      <div class="result-item">🎯 Kết quả: <span id="diceValues"></span></div>
+      <div class="result-item total">🎲 Tổng: <span id="totalValue">0</span></div>
+      <div class="result-item" id="betResult">💰 Bạn đã cược...</div>
+    </div>
+  </div>
+
+  <div class="final-message" id="finalMessage" style="display: none;">
+    <h1> Người không chơi là người thắng!</h1>
+    <p> Người chơi không bao giờ thắng.</p>
+  </div>
+
+  <!-- Nhạc nền -->
+  <audio id="bgMusic" loop>
+    <source src="aa.mp3" type="audio/mpeg" />
+    Trình duyệt không hỗ trợ phát nhạc.
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
